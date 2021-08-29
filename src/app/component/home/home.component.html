@@ -1,0 +1,45 @@
+<div class="home">
+    <div class="home-container">
+        <div class="news-list scroll-bar">
+            <div class="news-card-wrapper" *ngFor='let item of news'>
+                <div class="news-card" (click)='openDescription($event, item)'>
+                    <div class="news-img">
+                        <div class="star-icon" (click)='onFavorite(item.id)' [ngClass]='{"star-icon-white":!item.isFavorite, "star-icon-yellow":item.isFavorite}'>⭐</div>
+                        <img [src]="item.urlToImage" alt="News Image">
+                    </div>
+                    <div class="news-title">
+                        {{item.title}}
+                    </div>
+                    <div class="news-description">
+                        {{item.description | newsDescription}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-detail scroll-bar" *ngIf='domState.showNewsDescription'>
+            <div class="close-article" (click)='closeDescription()'>< Close article</div>
+            <div class="news-detail-wrapper">
+                <div class="news-detail-img">
+                    <img [src]="newsDescription.image" alt="News Image">
+                </div>
+                <div class="news-detail-title">
+                    {{newsDescription.title}}
+                </div>
+                <div class="news-detail-meta">
+                    <div class="news-detail-author">
+                        {{newsDescription.author}}
+                    </div>
+                    <div class="news-detail-link">
+                        <a [href]="newsDescription.link">Source</a>
+                    </div>
+                    <div class="news-detail-date">
+                        {{newsDescription.date}}
+                    </div>
+                </div>
+                <div class="news-detail-content">
+                    {{newsDescription.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

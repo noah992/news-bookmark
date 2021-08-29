@@ -1,0 +1,14 @@
+<div class="app">
+  <div class="app-container">
+    <div class="header">
+      <div class="header-container">
+        <div class="logo" [routerLink]='["/"]'>News Bookmark</div>
+        <div class="nav">
+          <div class="nav-item" [routerLink]='["/favorite"]'>Favorite</div>
+          <div class="nav-item" [routerLink]='["/history"]'>History</div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

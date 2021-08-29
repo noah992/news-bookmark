@@ -1,0 +1,17 @@
+<div class="history">
+    <div class="history-container">
+        <div class="history-list scroll-bar">
+            <div class="history-row" *ngFor='let item of history'>
+                <a [href]="item.url" class='history-link'>
+                    <div class="history-img">
+                        <img [src]="item.urlToImage" alt="New Image">
+                    </div>
+                    <div class="history-title">
+                        {{item.title}}
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

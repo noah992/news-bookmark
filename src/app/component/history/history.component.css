@@ -1,0 +1,39 @@
+.history {
+    padding: 1rem;
+}
+
+.history-container {
+    display: flex;
+    justify-content: center;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    height: 42rem;
+}
+
+.history-row {
+    display: flex;
+}
+
+.history-link {
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid darkblue;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.history-img > img {
+    width: 10rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.history-title {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
